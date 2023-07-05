@@ -30,3 +30,13 @@ repos:
   hooks:
   - id: markdownlint-cli2
     name: lint markdown
+
+- repo: local
+  hooks:
+  - id: hadolint
+    name: Lint Dockerfiles
+    description: Run hadolint via docker to lint Dockerfiles
+    language: script
+    types_or:
+    - dockerfile
+    entry: tools/hadolint
